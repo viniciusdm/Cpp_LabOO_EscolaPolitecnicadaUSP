@@ -1,0 +1,83 @@
+======================================================================
+T5T-G7
+======================================================================
+
+ Extra public members
+----------------------------------------------------------------------
+
+Competicao.h
+  Methods:
+    OK
+  Atributes:
+    OK
+
+CompeticaoMultimodalidades.h
+  Methods:
+    OK
+  Atributes:
+    OK
+
+CompeticaoSimples.h
+  Methods:
+    OK
+  Atributes:
+    OK
+
+Equipe.h
+  Methods:
+    OK
+  Atributes:
+    OK
+
+Modalidade.h
+  Methods:
+    OK
+  Atributes:
+    OK
+
+PersistenciaDeCompeticao.h
+  Methods:
+    OK
+  Atributes:
+    OK
+
+Tabela.h
+  Methods:
+    OK
+  Atributes:
+    OK
+
+TabelaComOrdem.h
+  Methods:
+    OK
+  Atributes:
+    OK
+
+TabelaComPontos.h
+  Methods:
+    OK
+  Atributes:
+    OK
+
+ Extra Classes
+----------------------------------------------------------------------
+OK
+
+ No Camel Case
+----------------------------------------------------------------------
+OK
+
+ Unused private parameter
+----------------------------------------------------------------------
+OK
+
+ Bad programming practices
+----------------------------------------------------------------------
+[files/T5T-G7/PersistenciaDeCompeticao.h:26]: (style) Unused private function: 'PersistenciaDeCompeticao::tipoCompeticao'
+[files/T5T-G7/main.cpp:82]: (style) Variable 'e4' is assigned a value that is never used.
+[files/T5T-G7/main.cpp:83]: (style) Variable 'e5' is assigned a value that is never used.
+[files/T5T-G7/main.cpp:159]: (style) Variable 'tabComOrdem' is assigned a value that is never used.
+
+ Duplicated code
+----------------------------------------------------------------------
+OK
