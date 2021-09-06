@@ -1,7 +1,25 @@
 #include "Musica.h"
 #include <iostream>
 
+#include<string>
+
 using namespace std;
+
+void Musica::setNome(std::string nome){
+    this -> nome = nome;
+}
+
+std::string Musica::getNome(){
+    return nome;
+}
+
+void Musica::setDuracao(int duracao){
+    this -> duracao = duracao;
+}
+
+int Musica::getDuracao(){
+    return duracao;
+}
 
 void Musica::avaliar(int nota) {
     somaDasAvaliacoes += nota;
@@ -13,13 +31,13 @@ double Musica::getMedia() {
 }
 
 void Musica::imprimir() {
-    cout << nome << " - " << duracao << " segundos - " << this->getMedia()  << " avaliacao" << endl;
+    cout << nome << " - " << duracao << " segundos - " << this -> getMedia()  << " avaliacao" << endl;
 }
 
 void teste() {
     Musica *Roses = new Musica;
-    Roses -> nome = "Roses";
-    Roses -> duracao = 180;
+    Roses -> setNome("Roses");
+    Roses -> setDuracao(180);
     Roses -> avaliar(3);
     Roses -> avaliar(3);
     Roses -> avaliar(1);
