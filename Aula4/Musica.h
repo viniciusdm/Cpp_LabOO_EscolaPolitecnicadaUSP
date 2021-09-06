@@ -1,9 +1,11 @@
 #ifndef MUSICA_H
 #define MUSICA_H
 
+#include <string>
+
 class Musica {
 public:
-    string nome;
+    std::string nome;
     int duracao;
     int quantidadeDeAvalicoes = 0;
     int somaDasAvaliacoes = 0;
