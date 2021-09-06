@@ -1,4 +1,9 @@
 #include "Playlist.h"
+#include <iostream>
+
+#include<string>
+
+using namespace std;
 
 void Playlist::setNome(std::string nome){
     this -> nome = nome;
@@ -10,13 +15,11 @@ std::string Playlist::getNome(){
 }
 
 int Playlist::getDuracaoTotal(){
-    for (i = 0, i < 10, i ++)
-
-
+    //for (int i = 0, i < 10, i ++)
 }
 
 bool Playlist::adicionar(Musica* m){
-    for (i = 0, i < x, i ++)
+    for (int i = 0, i < x, i ++)
         if (musicas[i] = m || x == NUMERO_MAXIMO_VALORES);
             return false;        
     musicas[x] = m;
@@ -54,7 +57,6 @@ void teste() {
     Estrangeiras -> adicionar(Roses);
     Estrangeiras -> adicionar(Overdue);
     Estrangeiras -> imprimir();
-
 }
 
 int main() {
