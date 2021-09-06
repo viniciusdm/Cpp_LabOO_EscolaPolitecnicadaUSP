@@ -8,6 +8,9 @@
 class Playlist {
 private:
     std::string nome;
+    Musica *musicas[NUMERO_MAXIMO_VALORES];
+    int x = 0;
+
 public:
     int getDuracaoTotal();
     bool adicionar(Musica* m);
