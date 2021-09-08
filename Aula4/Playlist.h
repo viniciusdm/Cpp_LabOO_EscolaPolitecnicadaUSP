@@ -1,15 +1,16 @@
 #ifndef PLAYLIST_H
 #define PLAYLIST_H
 
-#include "Musica.h"
-
 #define NUMERO_MAXIMO_VALORES 10
+
+#include "Musica.h"
 
 class Playlist {
 private:
     std::string nome;
+    int quantidade = 0;
+    int duracaoTotal = 0;
     Musica *musicas[NUMERO_MAXIMO_VALORES];
-    int x = 0;
 
 public:
     int getDuracaoTotal();

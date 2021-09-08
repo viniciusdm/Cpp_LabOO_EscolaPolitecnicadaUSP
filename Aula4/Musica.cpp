@@ -33,7 +33,7 @@ double Musica::getMedia() {
 void Musica::imprimir() {
     cout << nome << " - " << duracao << " segundos - " << this -> getMedia()  << " avaliacao" << endl;
 }
-
+/*
 void teste() {
     Musica *Roses = new Musica;
     Roses -> setNome("Roses");
@@ -43,8 +43,11 @@ void teste() {
     Roses -> avaliar(1);
     Roses -> imprimir();
 }
-
+*/
+/*
 int main() {
     teste();
     return 0;
 }
+*/
+
