@@ -33,3 +33,5 @@ double Musica::getMedia() {
 void Musica::imprimir() {
     cout << nome << " - " << duracao << " segundos - " << this -> getMedia()  << " avaliacao" << endl;
 }
+
+

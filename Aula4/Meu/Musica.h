@@ -3,15 +3,17 @@
 
 #include <string>
 
+using namespace std;
+
 class Musica {
 private:
-    std::string nome;
+    string nome;
     int duracao;
     int quantidadeDeAvalicoes = 0;
     int somaDasAvaliacoes = 0;
 
 public:
-    std::string getNome();
+    string getNome();
     void setNome(std::string nome);
     int getDuracao();
     void setDuracao(int duracao);

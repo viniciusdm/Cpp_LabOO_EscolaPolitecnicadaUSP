@@ -5,9 +5,11 @@
 
 #include "Musica.h"
 
+using namespace std;
+
 class Playlist {
 private:
-    std::string nome;
+    string nome;
     int quantidade = 0;
     int duracaoTotal = 0;
     Musica *musicas[NUMERO_MAXIMO_VALORES];
@@ -15,8 +17,8 @@ private:
 public:
     int getDuracaoTotal();
     bool adicionar(Musica* m);
-    void setNome(std::string nome);
-    std::string getNome();
+    void setNome(string nome);
+    string getNome();
     int getQuantidade();
     void imprimir();
 };
