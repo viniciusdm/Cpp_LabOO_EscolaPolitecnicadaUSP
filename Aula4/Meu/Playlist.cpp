@@ -66,9 +66,9 @@ void teste() {
     Estrangeiras -> adicionar(Overdue);
     Estrangeiras -> imprimir();
 }
-/*
+
 int main() {
     teste();
     return 0;
 }
-*/
+
