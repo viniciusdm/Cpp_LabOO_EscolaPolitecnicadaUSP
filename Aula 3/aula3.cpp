@@ -1,9 +1,10 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Musica {
 public:
-    string nome;
+    std::string nome;
     int duracao;
     int quantidadeDeAvaliacoes = 0;
     int somaDasAvaliacoes = 0;
@@ -29,7 +30,7 @@ void Musica::imprimir(){
 }
 class Playlist {
 public:
-    string nome;
+    std::string nome;
     Musica* m1 = NULL;
     Musica* m2 = NULL;
 
