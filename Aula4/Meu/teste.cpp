@@ -7,14 +7,14 @@ using namespace std;
 
 void teste() {
     Musica *Roses = new Musica;
-    Roses -> setNome("Roses");
+    Roses -> setNome("Camila");
     Roses -> setDuracao(180);
     Roses -> avaliar(3);
     Roses -> avaliar(3);
     Roses -> avaliar(1);
 
     Musica *Overdue = new Musica;
-    Overdue -> setNome("Overdue");
+    Overdue -> setNome("Vinicius");
     Overdue -> setDuracao(210);
     Overdue -> avaliar(1);
     Overdue -> avaliar(5);
