@@ -5,11 +5,11 @@
 
 using namespace std;
 
-void Musica::setNome(std::string nome){
+void Musica::setNome(string nome){
     this -> nome = nome;
 }
 
-std::string Musica::getNome(){
+string Musica::getNome(){
     return nome;
 }
 
