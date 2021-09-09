@@ -14,7 +14,7 @@ void teste() {
     Roses -> avaliar(1);
 
     Musica *Overdue = new Musica;
-    Overdue -> setNome("Vinicius");
+    Overdue -> setNome("Amanda");
     Overdue -> setDuracao(210);
     Overdue -> avaliar(1);
     Overdue -> avaliar(5);
