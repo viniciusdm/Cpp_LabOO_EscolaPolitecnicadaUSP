@@ -14,7 +14,7 @@ private:
 
 public:
     string getNome();
-    void setNome(std::string nome);
+    void setNome(string nome);
     int getDuracao();
     void setDuracao(int duracao);
     void avaliar(int nota);
