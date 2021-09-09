@@ -1,6 +1,10 @@
-oi, sou o bodao
-override
-vhdl
+// Your First C++ Program
 
-freio
-de bode 
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    std::cout << "Hello Worldoo!"<< endl;
+    return 0;
+}
