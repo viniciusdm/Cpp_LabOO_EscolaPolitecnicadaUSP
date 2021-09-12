@@ -8,7 +8,7 @@ Artista::Artista(int quantidadeMaxima, string nome){
     this -> quantidadeMaxima = quantidadeMaxima;
     this -> nome = nome;
     quantidade = 0;
-    Musica** musicas = new Musica*[quantidadeMaxima];
+    musicas = new Musica*[quantidadeMaxima];
 }
 
 Artista::~Artista(){

@@ -15,7 +15,6 @@ void teste() {
     Artista *Elis = new Artista(23, "Elis Regina");
     Elis -> adicionarMusica(m1);
     Elis -> adicionarMusica(m2);
-    cout << "amor" << endl;
     Elis -> adicionarMusica(m3);
     Elis -> adicionarMusica(m4);
 
