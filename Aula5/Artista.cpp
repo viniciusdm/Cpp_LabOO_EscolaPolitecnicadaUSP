@@ -12,7 +12,7 @@ Artista::Artista(int quantidadeMaxima, string nome){
 }
 
 Artista::~Artista(){
-    cout << "Artista com" << quantidade << "musica(s) destruido" << endl;
+    cout << "Artista com " << quantidade << " musica(s) destruido" << endl;
 }
 
 Musica** Artista::getMusicas() const {
@@ -34,7 +34,6 @@ string Artista::getNome() const {
 bool Artista::adicionarMusica(Musica* musica) {
     if (quantidade >= quantidadeMaxima)
         return false;
-
     musicas[quantidade++] = musica;
     return true;
 }
