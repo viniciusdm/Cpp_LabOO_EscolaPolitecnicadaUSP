@@ -7,6 +7,7 @@ using namespace std;
 class Musica {
 public:
     Musica(int duracao, string nome);
+    ~Musica();
     string getNome();
     int getDuracao();
     void imprimir();

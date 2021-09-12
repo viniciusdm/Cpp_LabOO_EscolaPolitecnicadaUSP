@@ -1,8 +1,17 @@
-#include <iostream>
-
 #include "Artista.h"
 
-// IMPLEMENTE O CONSTRUTOR E O DESTRUTOR
+#include <string>
+#include <iostream>
+using namespace std;
+
+Artista::Artista(int quantidadeMaxima, string nome){
+    this -> quantidadeMaxima = quantidadeMaxima;
+    this -> nome = nome;
+}
+
+Artista::~Artista(){
+    cout << "Artista com" << quantidade << "musica(s) destruido" << endl;
+}
 
 Musica** Artista::getMusicas() const {
     return musicas;

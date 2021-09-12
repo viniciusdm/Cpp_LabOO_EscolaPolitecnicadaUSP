@@ -9,6 +9,10 @@ Musica::Musica(int duracao, string nome){
     this -> nome = nome;
 }
 
+Musica::~Musica(){
+    cout << "Musica" << nome << "Destruida" << endl;
+}
+
 string Musica::getNome() {
     return nome;
 }
