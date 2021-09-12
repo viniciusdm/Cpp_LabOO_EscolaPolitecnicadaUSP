@@ -1,7 +1,12 @@
-// Faca os includes necessarios
+#include "Musica.h"
+
+#include <string>
+#include <iostream>
+using namespace std;
 
 void teste() {
-    // IMPLEMENTE seguindo o enunciado
+    Musica *m = new Musica(180, "Roses");
+    m -> imprimir();
 }
 
 int main() {
