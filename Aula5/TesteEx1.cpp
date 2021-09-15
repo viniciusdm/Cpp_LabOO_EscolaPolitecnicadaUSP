@@ -9,7 +9,9 @@ void teste() {
     m -> imprimir();
 }
 
+/*
 int main() {
     teste();
     return 0;
 }
+*/

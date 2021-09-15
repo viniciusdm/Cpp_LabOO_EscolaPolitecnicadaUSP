@@ -13,6 +13,9 @@ Artista::Artista(int quantidadeMaxima, string nome){
 
 Artista::~Artista(){
     cout << "Artista com " << quantidade << " musica(s) destruido" << endl;
+    for (int i = 0; i < quantidade; i++)
+        delete musicas[i];
+    delete[] musicas;
 }
 
 Musica** Artista::getMusicas() const {
@@ -40,5 +43,4 @@ bool Artista::adicionarMusica(Musica* musica) {
 
 void Artista::imprimir() {
     cout << getNome() << endl;
-    for(int i = 0; i < quantidade; i++) musicas[i]->imprimir();
 }
