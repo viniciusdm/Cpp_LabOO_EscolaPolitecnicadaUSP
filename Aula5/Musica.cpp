@@ -10,7 +10,7 @@ Musica::Musica(int duracao, string nome){
 }
 
 Musica::~Musica(){
-    cout << "Musica" << nome << "Destruida" << endl;
+    cout << "Musica " << nome << " destruida" << endl;
 }
 
 string Musica::getNome() {
