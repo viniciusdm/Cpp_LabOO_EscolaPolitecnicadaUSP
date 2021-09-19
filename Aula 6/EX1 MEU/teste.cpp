@@ -17,11 +17,11 @@ void teste() {
     a1 -> adicionarMusica(m2);
 
     Banda* b1 = static_cast<Banda*>(a1);
-    cout << b1->imprimir() << endl;
+    b1 -> imprimir();
+    b1 -> getNome();
+    b1 -> getQuantidadeMaximaMusicas();
 
     delete a1;
-    delete b1;
-
 }
 
 int main() {
