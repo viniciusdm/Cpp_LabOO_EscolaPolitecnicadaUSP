@@ -1,17 +1,19 @@
 #ifndef BANDA_H
 #define BANDA_H
-// Adicione aqui as diretivas de compilacao necessarias
 
-class Banda {
+#include"Artista.h"
+
+#include <string>
+using namespace std;
+
+class Banda : public Artista {
 private:
-    // Adicione aqui os atributos necessarios
+    int numeroDeMembros;
 
 public:
     Banda(int numeroDeMembros, int quantidadeMaxima, string nome);
     ~Banda();
-
     int getNumeroDeMembros();
-
     void imprimir();
 };
 

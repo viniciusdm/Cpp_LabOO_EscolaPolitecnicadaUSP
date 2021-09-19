@@ -7,12 +7,14 @@ using namespace std;
 
 class Artista {
 private:
-    int quantidadeMaxima;
-    string nome;
     Musica** musicas;
     int quantidadeDeMusicas;
-
     int getIndice(Musica* musica);
+
+protected:
+    int quantidadeMaxima;
+    string nome;
+
 public:
     Artista(int quantidadeMaxima, string nome);
     virtual ~Artista();
