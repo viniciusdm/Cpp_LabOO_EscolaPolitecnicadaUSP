@@ -5,6 +5,7 @@
 #include <iostream>
 using namespace std;
 
+
 void teste() {
 
     Musica *m1 = new Musica(162, "Tiro ao alvaro");
