@@ -3,8 +3,8 @@
 #include <iostream>
 using namespace std;
 
-Banda::Banda(int numeroDeMembros, int quantidadeMaxima, string nome) : Artista(quantidadeMaxima, nome), 
-                                                                        numeroDeMembros(quantidadeDeMembros) {
+Banda::Banda(int numeroDeMembros, int quantidadeMaxima, string nome) : Artista(quantidadeMaxima, nome) {
+  this -> numeroDeMembros = numeroDeMembros;
 }
 
 Banda::~Banda() {

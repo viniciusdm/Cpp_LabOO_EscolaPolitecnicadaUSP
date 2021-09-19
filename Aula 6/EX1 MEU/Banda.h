@@ -8,7 +8,6 @@ using namespace std;
 
 class Banda : public Artista {
 private:
-    int quantidadeDeMembros; 
     int numeroDeMembros;
 
 public:
@@ -18,4 +17,4 @@ public:
     void imprimir();
 };
 
-#endif // BANDA_H
+#endif
