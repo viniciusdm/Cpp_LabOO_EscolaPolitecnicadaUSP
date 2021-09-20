@@ -2,7 +2,7 @@
 
 #include "Musica.h"
 
-Musica::Musica(int duracao, string nome) : duracao(duracao), nome(nome){
+Musica::Musica(int duracao, string nome) : duracao(duracao), nome(nome) {
 }
 
 
