@@ -23,9 +23,9 @@ void teste() {
 
     delete a1;
 }
-/*
+
 int main() {
     teste();
     return 0;
 }
-*/
+
