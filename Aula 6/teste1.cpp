@@ -5,7 +5,7 @@
 #include <iostream>
 
 using namespace std;
-
+/*
 void teste() {
     
     Artista* a1 = new Banda(20, 5, "Snarky Puppy");
@@ -21,7 +21,7 @@ void teste() {
 
     delete a1;
 }
-/*
+
 int main() {
     teste();
     return 0;

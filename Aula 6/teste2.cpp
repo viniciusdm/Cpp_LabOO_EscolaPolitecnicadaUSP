@@ -1,12 +1,13 @@
 #include "Artista.h"
 #include "Banda.h"
 #include "Usuario.h"
+#include "Musica.h"
 
 #include <string>
 #include <iostream>
 
 using namespace std;
-/*
+
 void teste() {
     
     Artista* Elis = new Artista(2, "Elis Regina");
@@ -34,7 +35,7 @@ void teste() {
     delete Elis;
     delete Snarky;
 }
-
+/*
 int main() {
     teste();
     return 0;
