@@ -56,21 +56,26 @@ bool Playlist::adicionar(Artista *a) {
         return false;
     }
     for (int i = 0; i < quantidadeDeArtistas; i++){
-        if (artistas[i] = a){
+        if (artistas[i] == a){
             return false;
         }
     }
     musicasDoArtista = a -> getMusicas();
     quantidadeDeMusicasDoArtista = a -> getQuantidadeDeMusicas();
-    if ((quantidadeDeMusicasDoArtista + quantidadeDeMusicas) >= maximoValor){
-        return false;
-    }
-    artistas[quantidadeDeArtistas++] = a;
     for (int i = 0; i < quantidadeDeMusicasDoArtista; i++){
         if (temMusica(musicasDoArtista[i]) == false){
-            adicionar(musicasDoArtista[i]);
+            c = c + 1;
         }
     }
+    if ((c + quantidadeDeMusicas) > maximoValor){
+        return false;
+    }
+    for (int i = 0; i < quantidadeDeMusicasDoArtista; i++){
+        if (temMusica(musicasDoArtista[i]) == false){
+            musicas[quantidadeDeMusicas++] = musicasDoArtista[i];
+        }
+    }
+    artistas[quantidadeDeArtistas++] = a;
     return true;
 }
 

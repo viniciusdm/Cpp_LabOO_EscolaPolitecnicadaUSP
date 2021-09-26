@@ -20,3 +20,14 @@ bool Banda::adicionar(Artista *a) {
     artistas[quantidadeDeArtistas++] = a;
     return true;
 }
+
+double Banda::getNota(Artista** artistas){
+    for (int 1 = 0; i < quantidadeDeArtistas; i++){
+        totalDePontos = totalDePontos + (artistas[i] -> getNota());
+    }
+    if ((totalDePontos / quantidadeDeArtistas) >= 5){
+        return 5;
+    }
+    return (totalDePontos / quantidadeDeArtistas);
+}
+

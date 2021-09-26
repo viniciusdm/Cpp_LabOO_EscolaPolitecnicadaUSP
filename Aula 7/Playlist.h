@@ -35,8 +35,9 @@ private:
     int quantidadeDeMusicas = 0;
     Artista** artistas;
     Musica** musicasDoArtista;
-    int quantidadeDeArtistas;
+    int quantidadeDeArtistas = 0;
     int quantidadeDeMusicasDoArtista;
+    int c = 0;
 };
 
 #endif 

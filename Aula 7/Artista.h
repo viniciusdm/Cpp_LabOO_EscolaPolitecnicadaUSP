@@ -25,7 +25,7 @@ public:
 
     string getNome() const;
 
-    double getNota();
+    virtual double getNota();
 
     bool adicionarMusica(Musica* musica);
 

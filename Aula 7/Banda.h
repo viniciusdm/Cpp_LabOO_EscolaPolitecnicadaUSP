@@ -11,13 +11,13 @@ class Banda: public Artista {
 private:
     Artista** artistas;
     int quantidadeDeArtistas = 0;
+    int totalDePontos = 0;
 
 public:
     Banda(int quantidadeMaxima, string nome);
     ~Banda();
-
     bool adicionar(Artista *a);
-    // REDEFINA o metodo getNota()
+    double getNota();
 };
 
-#endif /* BANDA_H */
+#endif
