@@ -5,6 +5,7 @@
 
 #include "Artista.h"
 #include "Musica.h"
+#include "Banda.h"
 
 using namespace std;
 
@@ -22,6 +23,8 @@ public:
     Musica** getMusicas();
     Artista** getArtistas();
 
+    Banda** getBandas();
+
     bool adicionar(Musica *m);
     bool adicionar(Artista *a);
 
@@ -35,9 +38,11 @@ private:
     int quantidadeDeMusicas = 0;
     Artista** artistas;
     Musica** musicasDoArtista;
+    Banda** bandas;
     int quantidadeDeArtistas = 0;
     int quantidadeDeMusicasDoArtista;
     int c = 0;
+    int quantidade = 0;
 };
 
 #endif 

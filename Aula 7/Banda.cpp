@@ -22,12 +22,16 @@ bool Banda::adicionar(Artista *a) {
 }
 
 double Banda::getNota(Artista** artistas){
-    for (int 1 = 0; i < quantidadeDeArtistas; i++){
+    for (int i = 0; i < quantidadeDeArtistas; i++){
         totalDePontos = totalDePontos + (artistas[i] -> getNota());
     }
     if ((totalDePontos / quantidadeDeArtistas) >= 5){
-        return 5;
+        return 5.00;
     }
     return (totalDePontos / quantidadeDeArtistas);
 }
 
+void Banda::imprimir(){
+    cout << "Banda de " << quantidadeDeArtistas << " membros" << endl;
+    Artista::imprimir();
+}

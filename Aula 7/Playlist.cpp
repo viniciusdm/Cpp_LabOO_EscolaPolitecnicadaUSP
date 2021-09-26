@@ -5,11 +5,23 @@
 Playlist::Playlist(string nome, int maximoValor)
     : nome(nome), maximoValor(maximoValor), musicas(new Musica*[maximoValor]) {
         artistas = new Artista*[maximoValor];
+        bandas = new Banda*[maximoValor];
     }
 
 Playlist::~Playlist() {
     delete[] musicas;
     delete[] artistas;
+}
+
+Banda** Playlist::getBandas(){
+    for (int i = 0; i < quantidadeDeArtistas; i++){
+        Banda* b1 = dynamic_cast<Banda*>(artistas[i]);
+        if (b1 != NULL){
+            bandas[quantidade++] = b1;
+            b1 = NULL;
+        }
+    }
+    return bandas; 
 }
 
 string Playlist::getNome() {
