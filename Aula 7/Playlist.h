@@ -33,8 +33,10 @@ private:
     int maximoValor;
     Musica **musicas;
     int quantidadeDeMusicas = 0;
-
-	/* ADICIONAR ATRIBUTOS PARA GUARDAR ARTISTAS */
+    Artista** artistas;
+    Musica** musicasDoArtista;
+    int quantidadeDeArtistas;
+    int quantidadeDeMusicasDoArtista;
 };
 
-#endif /* PLAYLIST_H */
+#endif 

@@ -3,10 +3,13 @@
 #include "Playlist.h"
 
 Playlist::Playlist(string nome, int maximoValor)
-    : nome(nome), maximoValor(maximoValor), musicas(new Musica*[maximoValor]) {}
+    : nome(nome), maximoValor(maximoValor), musicas(new Musica*[maximoValor]) {
+        artistas = new Artista*[maximoValor];
+    }
 
 Playlist::~Playlist() {
     delete[] musicas;
+    delete[] artistas;
 }
 
 string Playlist::getNome() {
@@ -26,7 +29,7 @@ int Playlist::getQuantidadeDeMusicas() const {
 }
 
 int Playlist::getQuantidadeDeArtistas() const {
-    /* IMPLEMENTAR METODO */
+    return quantidadeDeArtistas;
 }
 
 Musica** Playlist::getMusicas() {
@@ -34,7 +37,7 @@ Musica** Playlist::getMusicas() {
 }
 
 Artista** Playlist::getArtistas() {
-    /* IMPLEMENTAR METODO */
+    return artistas;
 }
 
 bool Playlist::adicionar(Musica *m) {
@@ -49,7 +52,26 @@ bool Playlist::adicionar(Musica *m) {
 }
 
 bool Playlist::adicionar(Artista *a) {
-    /* IMPLEMENTAR METODO */
+    if (quantidadeDeArtistas >= maximoValor){
+        return false;
+    }
+    for (int i = 0; i < quantidadeDeArtistas; i++){
+        if (artistas[i] = a){
+            return false;
+        }
+    }
+    musicasDoArtista = a -> getMusicas();
+    quantidadeDeMusicasDoArtista = a -> getQuantidadeDeMusicas();
+    if ((quantidadeDeMusicasDoArtista + quantidadeDeMusicas) >= maximoValor){
+        return false;
+    }
+    artistas[quantidadeDeArtistas++] = a;
+    for (int i = 0; i < quantidadeDeMusicasDoArtista; i++){
+        if (temMusica(musicasDoArtista[i]) == false){
+            adicionar(musicasDoArtista[i]);
+        }
+    }
+    return true;
 }
 
 void Playlist::imprimir() {
