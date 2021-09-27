@@ -25,10 +25,10 @@ double Banda::getNota(Artista** artistas){
     for (int i = 0; i < quantidadeDeArtistas; i++){
         totalDePontos = totalDePontos + (artistas[i] -> getNota());
     }
-    if ((totalDePontos / quantidadeDeArtistas) >= 5){
+    if (((totalDePontos / quantidadeDeArtistas) + 1) >= 5){
         return 5.00;
     }
-    return (totalDePontos / quantidadeDeArtistas);
+    return ((totalDePontos / quantidadeDeArtistas) + 1);
 }
 
 void Banda::imprimir(){
