@@ -20,7 +20,6 @@ void teste() {
     p -> imprimir();
 }
 
-
 int main() {
     teste();
     return 0;
