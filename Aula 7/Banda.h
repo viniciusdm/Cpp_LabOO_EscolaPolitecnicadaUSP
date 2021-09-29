@@ -17,7 +17,7 @@ public:
     Banda(int quantidadeMaxima, string nome);
     ~Banda();
     bool adicionar(Artista* a);
-    double getNota(Artista** artistas);
+    double getNota();
     void imprimir();
 };
 

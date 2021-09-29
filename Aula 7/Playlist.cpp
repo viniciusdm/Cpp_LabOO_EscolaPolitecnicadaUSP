@@ -13,14 +13,18 @@ Playlist::~Playlist() {
     delete[] artistas;
 }
 
-Banda** Playlist::getBandas(){
+Banda** Playlist::getBandas(int& quantidade){
+    quantidade = 0;
     for (int i = 0; i < quantidadeDeArtistas; i++){
         Banda* b1 = dynamic_cast<Banda*>(artistas[i]);
         if (b1 != NULL){
             bandas[quantidade++] = b1;
-            b1 = NULL;
         }
     }
+    if (quantidade == 0){
+        return NULL;
+    }
+    quantidade = quantidade;
     return bandas; 
 }
 

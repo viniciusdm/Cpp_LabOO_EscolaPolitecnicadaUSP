@@ -21,7 +21,7 @@ bool Banda::adicionar(Artista *a) {
     return true;
 }
 
-double Banda::getNota(Artista** artistas){
+double Banda::getNota(){
     for (int i = 0; i < quantidadeDeArtistas; i++){
         totalDePontos = totalDePontos + (artistas[i] -> getNota());
     }

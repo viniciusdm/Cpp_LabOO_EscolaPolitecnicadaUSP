@@ -23,7 +23,7 @@ public:
     Musica** getMusicas();
     Artista** getArtistas();
 
-    Banda** getBandas();
+    Banda** getBandas(int& quantidade);
 
     bool adicionar(Musica *m);
     bool adicionar(Artista *a);
@@ -42,7 +42,7 @@ private:
     int quantidadeDeArtistas = 0;
     int quantidadeDeMusicasDoArtista;
     int c = 0;
-    int quantidade = 0;
+
 };
 
 #endif 

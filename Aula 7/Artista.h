@@ -32,4 +32,4 @@ public:
     void imprimir();
 };
 
-#endif /* ARTISTA_H */
+#endif
