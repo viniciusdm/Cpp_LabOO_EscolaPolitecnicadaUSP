@@ -2,8 +2,8 @@
 #define  ARTISTA_H
 
 #include "Musica.h"
-#include <string>
 
+#include <string>
 using namespace std;
 
 class Artista {
