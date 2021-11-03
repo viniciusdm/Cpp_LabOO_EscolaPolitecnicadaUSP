@@ -1,4 +1,5 @@
 #include "Artista.h"
+
 #include <iostream>
 
 Artista::Artista(int quantidadeMaxima, string nome) : quantidadeMaxima(quantidadeMaxima), nome(nome){
@@ -40,11 +41,4 @@ bool Artista::adicionarMusica(Musica* musica){
     return true;
 }
 
-void Artista::imprimir(){
-    cout << "- " << getNome() << endl;
-    for (int i = 0; i < quantidadeDeMusicas; i++) {
-        cout << "\t";
-        musicas[i]->imprimir();
-    }
-}
 

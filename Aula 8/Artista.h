@@ -1,9 +1,8 @@
 #ifndef ARTISTA_H
 #define  ARTISTA_H
 
-#include <string>
-
 #include "Musica.h"
+#include <string>
 
 using namespace std;
 

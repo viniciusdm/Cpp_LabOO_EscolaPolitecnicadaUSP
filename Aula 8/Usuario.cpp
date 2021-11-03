@@ -1,6 +1,6 @@
-#include <iostream>
-
 #include "Usuario.h"
+
+#include<iostream>
 
 Usuario::Usuario(string login, int maximoFavoritos) : login(login), maximoFavoritos(maximoFavoritos) {
   favoritos = new Artista*[maximoFavoritos];

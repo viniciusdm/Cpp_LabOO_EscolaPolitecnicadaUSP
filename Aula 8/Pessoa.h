@@ -1,16 +1,17 @@
 #ifndef PESSOA_H
 #define PESSOA_H
-#include <string>
-// Inclua aqui as diretivas de compilacao necessarias
 
+#include "Artista.h"
+
+#include <string>
 using namespace std;
 
-class Pessoa {
+class Pessoa : public Artista{
 private:
-    // Inclua aqui os atributos necessarios
 public:
     Pessoa(int quantidadeMaxima, string nome);
     virtual ~Pessoa();
+    void imprimir();
 };
 
 #endif // PESSOA_H

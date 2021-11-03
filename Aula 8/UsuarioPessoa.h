@@ -1,9 +1,13 @@
 #ifndef USUARIOPESSOA_H
 #define USUARIOPESSOA_H
-// Inclua aqui as diretivas de compilacao necessarias
 
+#include "Usuario.h"
+#include "Pessoa.h"
 
-class UsuarioPessoa {
+#include <string>
+using namespace std;
+
+class UsuarioPessoa : public Usuario, public Pessoa{
 private:
         // Inclua aqui os atributos necessarios
 public:

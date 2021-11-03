@@ -1,8 +1,6 @@
 #include "ContaEspecial.h"
 
-ContaEspecial::ContaEspecial (int numero,
-															double limite) : ContaCorrente (numero), limite (limite) {
-
+ContaEspecial::ContaEspecial (int numero, double limite) : ContaCorrente (numero), limite (limite) {
 }
 
 ContaEspecial::~ContaEspecial() {

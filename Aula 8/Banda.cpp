@@ -1,37 +1,37 @@
-#include <algorithm>
-#include <iostream>
-
 #include "Banda.h"
 
-Banda::Banda(int quantidadeMaxima, string nome)
-    : Artista(quantidadeMaxima, nome), artistas(new Artista*[quantidadeMaxima]) {}
+#include <iostream>
+
+Banda::Banda(int quantidadeMaxima, string nome) : Artista(quantidadeMaxima, nome){
+    pessoas = new Pessoa*[quantidadeMaxima];
+}
 
 Banda::~Banda(){}
 
-bool Banda::adicionar(Artista *a) {
-    if (quantidadeDeArtistas >= getQuantidadeMaxima())
+bool Banda::adicionar(Pessoa *a) {
+    if (quantidadeDePessoas >= getQuantidadeMaxima())
         return false;
 
-    for (int i = 0; i < quantidadeDeArtistas; i++)
-        if (artistas[i] == a)
+    for (int i = 0; i < quantidadeDePessoas; i++)
+        if (pessoas[i] == a)
             return false;
 
-    artistas[quantidadeDeArtistas++] = a;
+    pessoas[quantidadeDePessoas++] = a;
     return true;
 }
 
 double Banda::getNota() {
     double soma = 0;
-    for (int i = 0; i < quantidadeDeArtistas; i++)
-        soma += artistas[i]->getNota();
+    for (int i = 0; i < quantidadeDePessoas; i++)
+        soma += pessoas[i]->getNota();
 
-    return min(soma/quantidadeDeArtistas + 1, 5.);
+    return min(soma/quantidadeDePessoas + 1, 5.);
 }
 
-Artista** Banda::getParticipantes(){
-    return artistas;
+Pessoa** Banda::getParticipantes(){
+    return pessoas;
 }
 
 void Banda::imprimir() {
-  cout << "Banda de " << quantidadeDeArtistas << " membros" << endl;
+  cout << "Banda de " << quantidadeDePessoas << " membros" << endl;
 }

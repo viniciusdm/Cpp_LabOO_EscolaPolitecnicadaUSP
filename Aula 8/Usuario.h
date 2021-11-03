@@ -3,6 +3,9 @@
 
 #include "Artista.h"
 
+#include <string>
+using namespace std;
+
 class Usuario {
 private:
     string login;

@@ -1,6 +1,6 @@
-#include <iostream>
-
 #include "Musica.h"
+
+#include<iostream>
 
 Musica::Musica(int duracao, string nome) : duracao(duracao), nome(nome) {}
 
