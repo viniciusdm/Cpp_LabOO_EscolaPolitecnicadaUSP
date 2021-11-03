@@ -16,6 +16,7 @@ public:
     double getMedia();
 
     void imprimir();
+    
 private:
     int duracao;
     string nome;

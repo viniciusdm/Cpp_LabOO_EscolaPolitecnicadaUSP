@@ -8,7 +8,7 @@ Pessoa::Pessoa(int quantidadeMaxima, string nome) : Artista(quantidadeMaxima, no
 Pessoa::~Pessoa(){
 }
 
-void Artista::imprimir(){
+void Pessoa::imprimir(){
     cout << "- " << getNome() << endl;
     for (int i = 0; i < quantidadeDeMusicas; i++) {
         cout << "\t";

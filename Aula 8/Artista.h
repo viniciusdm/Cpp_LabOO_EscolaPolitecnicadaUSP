@@ -11,6 +11,7 @@ private:
     int quantidadeMaxima, quantidadeDeMusicas;
     string nome;
     Musica** musicas;
+    
 public:
     Artista(int quantidadeMaxima, string nome);
     virtual ~Artista();

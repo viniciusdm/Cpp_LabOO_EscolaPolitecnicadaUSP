@@ -11,11 +11,12 @@ class Banda: public Artista {
 private:
     int quantidadeDePessoas = 0;
     Pessoa** pessoas;
+    
 public:
     Banda(int quantidadeMaxima, string nome);
     virtual ~Banda();
 
-    bool adicionar(Artista *a);
+    bool adicionar(Pessoa *a);
 
     Pessoa** getParticipantes();
     double getNota();

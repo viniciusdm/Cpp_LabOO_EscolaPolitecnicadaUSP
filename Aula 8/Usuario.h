@@ -12,6 +12,7 @@ private:
     int maximoFavoritos;
     Artista** favoritos;
     int quantidadeDeFavoritos = 0;
+    
 public:
     Usuario(string login, int maximoFavoritos);
     virtual ~Usuario();
