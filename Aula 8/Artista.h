@@ -26,7 +26,7 @@ public:
 
     bool adicionarMusica(Musica* musica);
 
-    virtual void imprimir();
+    virtual void imprimir() = 0;
 };
 
 #endif /* ARTISTA_H */
