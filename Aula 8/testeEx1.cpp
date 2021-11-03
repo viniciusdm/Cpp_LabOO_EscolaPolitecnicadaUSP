@@ -3,7 +3,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-
+/*
 void teste() {
     Banda *b1 = new Banda(3, "Banda do Mar");
 
@@ -16,7 +16,6 @@ void teste() {
     b1 -> imprimir(); 
 }
 
-/*
 int main() {
     teste();
     return 0;
