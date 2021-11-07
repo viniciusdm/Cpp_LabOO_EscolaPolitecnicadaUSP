@@ -3,8 +3,16 @@
 
 #include "Playlist.h"
 
-Playlist::Playlist(string nome, int maximoValor)
-    : nome(nome), maximoValor(maximoValor) {
+Playlist::Playlist(string nome, int maximoValor){
+    
+    if (maximoValor <= 1) {
+        throw new invalid_argument ("maximoValor invalido");
+    }
+    if (nome.empty()) {
+        throw new invalid_argument ("nome invalido");
+    }
+    this -> nome = nome;
+    this -> maximoValor = maximoValor;
     musicas = new Musica*[maximoValor];
 }
 
@@ -32,18 +40,17 @@ Musica **Playlist::getMusicas() {
     return musicas;
 }
 
-bool Playlist::adicionar(Musica *m) {
-    if (quantidadeDeMusicas >= maximoValor)
-        return false;
-
-    if (m == nullptr)
-        return false;
-
-    if (temMusica(m))
-        return false;
-
+void Playlist::adicionar(Musica *m) {
+    if (quantidadeDeMusicas >= maximoValor){
+        throw new overflow_error ("musicas estourou");
+    }
+    if (m == nullptr){
+        throw new invalid_argument ("Nulo");
+    }
+    if (temMusica(m)){
+        throw new invalid_argument (m -> getNome() + " ja adicionado");
+    }
     musicas[quantidadeDeMusicas++] = m;
-    return true;
 }
 
 double Playlist::getAvaliacaoDasMusicas() const {

@@ -19,7 +19,7 @@ public:
 
     Musica **getMusicas();
 
-    bool adicionar(Musica *m);
+    void adicionar(Musica *m);
 
     double getAvaliacaoDasMusicas() const;
 
