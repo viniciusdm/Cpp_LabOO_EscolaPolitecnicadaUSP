@@ -54,8 +54,21 @@ void Playlist::adicionar(Musica *m) {
 }
 
 double Playlist::getAvaliacaoDasMusicas() const {
-    /* IMPLEMENTAR METODO */
-    return .0;
+    double medias = 0;
+    int musicasComAvalicao = 0;
+    for (int i = 0; i < quantidadeDeMusicas; i++){
+        try{
+            medias += musicas[i]->getMedia();
+            musicasComAvalicao += 1;
+        }
+        catch (SemAvaliacao *e){                   
+            delete e;
+        }
+    }
+    if (medias == 0 || quantidadeDeMusicas == 0){
+        return 0;
+    }
+    return medias/musicasComAvalicao;
 }
 
 void Playlist::imprimir() {
@@ -70,6 +83,5 @@ bool Playlist::temMusica(Musica *m) const {
     for (int i = 0; i < quantidadeDeMusicas; i++)
         if (musicas[i] == m)
             return true;
-
     return false;
 }

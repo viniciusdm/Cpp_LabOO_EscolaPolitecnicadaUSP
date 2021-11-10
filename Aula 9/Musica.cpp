@@ -15,6 +15,9 @@ void Musica::avaliar(int nota){
 }
 
 double Musica::getMedia(){
+    if (quantidadeDeAvalicoes == 0){
+        throw new SemAvaliacao(nome);
+    }
     return ((double)somaDasAvaliacoes)/quantidadeDeAvalicoes;
 }
 
