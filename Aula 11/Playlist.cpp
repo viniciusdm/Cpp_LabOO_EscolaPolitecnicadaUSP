@@ -4,13 +4,13 @@
 #include "Playlist.h"
 
 Playlist::Playlist(string nome)
-    : nome(nome), musicas(new vector<Musica*>*()) {
+    : nome(nome), musicas(new vector<Musica*>()) {
     if (nome.empty())
         throw new invalid_argument("Playlist Com Nome Vazio");
 }
 
 Playlist::~Playlist() {
-    delete[] musicas;
+    delete musicas;
 }
 
 string Playlist::getNome() {
@@ -44,7 +44,7 @@ double Playlist::getAvaliacaoDasMusicas() const {
     int numeroMusicas = 0;
     for (int i = 0; i < quantidadeMusica; i++) {
         try {
-            soma += musicas[i]->getMedia();
+            soma += musicas->at(i)->getMedia();
             numeroMusicas++;
         } catch (invalid_argument*) {}
     }
@@ -56,13 +56,13 @@ void Playlist::imprimir() {
     cout << "Playlist " << nome << " - duracao " << getDuracao() << " - media " << getAvaliacaoDasMusicas() << endl;
     for (int i = 0; i < quantidadeMusica; i++) {
         cout << "\t";
-        musicas[i]->imprimir();
+        musicas->at(i)->imprimir();
     }
 }
 
 bool Playlist::temMusica(Musica *m) const {
     for (int i = 0; i < quantidadeMusica; i++)
-        if (musicas[i] == m)
+        if (musicas->at(i) == m)
             return true;
 
     return false;

@@ -10,7 +10,7 @@ using namespace std;
 
 class Playlist {
 public:
-    Playlist(string nome, int maximoValor);
+    Playlist(string nome);
     ~Playlist();
 
     string getNome();
@@ -27,7 +27,6 @@ private:
     bool temMusica(Musica *m) const;
 
     string nome;
-    int maximoValor;
     vector<Musica*>* musicas;
     int quantidadeMusica = 0;
 };
