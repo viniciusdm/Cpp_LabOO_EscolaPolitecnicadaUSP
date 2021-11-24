@@ -28,7 +28,6 @@ private:
 
     string nome;
     vector<Musica*>* musicas;
-    int quantidadeMusica = 0;
 };
 
 #endif /* PLAYLIST_H */

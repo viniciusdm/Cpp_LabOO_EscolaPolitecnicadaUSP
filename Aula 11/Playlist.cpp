@@ -19,7 +19,7 @@ string Playlist::getNome() {
 
 int Playlist::getDuracao() {
     int duracao = 0;
-    for (int i = 0; i < quantidadeMusica; i++)
+    for (int i = 0; i < musicas->size(); i++)
         duracao += musicas->at(i)->getDuracao();
 
     return duracao;
@@ -42,7 +42,7 @@ void Playlist::adicionar(Musica *m) {
 double Playlist::getAvaliacaoDasMusicas() const {
     double soma = 0;
     int numeroMusicas = 0;
-    for (int i = 0; i < quantidadeMusica; i++) {
+    for (int i = 0; i < musicas->size(); i++) {
         try {
             soma += musicas->at(i)->getMedia();
             numeroMusicas++;
@@ -54,14 +54,14 @@ double Playlist::getAvaliacaoDasMusicas() const {
 
 void Playlist::imprimir() {
     cout << "Playlist " << nome << " - duracao " << getDuracao() << " - media " << getAvaliacaoDasMusicas() << endl;
-    for (int i = 0; i < quantidadeMusica; i++) {
+    for (int i = 0; i < musicas->size(); i++) {
         cout << "\t";
         musicas->at(i)->imprimir();
     }
 }
 
 bool Playlist::temMusica(Musica *m) const {
-    for (int i = 0; i < quantidadeMusica; i++)
+    for (int i = 0; i < musicas->size(); i++)
         if (musicas->at(i) == m)
             return true;
 

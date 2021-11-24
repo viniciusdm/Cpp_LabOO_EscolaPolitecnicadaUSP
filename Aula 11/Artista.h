@@ -2,6 +2,7 @@
 #define  ARTISTA_H
 
 #include <string>
+#include <list>
 
 #include "Musica.h"
 
@@ -9,21 +10,16 @@ using namespace std;
 
 class Artista {
 private:
-    int quantidadeMaxima;
     string nome;
-    Musica** musicas;
-    int quantidadeDeMusicas;
+    list<Musica*>* musicas;
 
     bool temMusica(Musica *m) const;
 
 public:
-    Artista(int quantidadeMaxima, string nome);
+    Artista(string nome);
     virtual ~Artista();
 
-    Musica** getMusicas();
-    int getQuantidadeDeMusicas()  const;
-    int getQuantidadeMaxima()  const;
-
+    list<Musica*>* getMusicas();
     string getNome() const;
 
     virtual double getNota() const;
