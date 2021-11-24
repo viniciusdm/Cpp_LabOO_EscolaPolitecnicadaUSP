@@ -2,6 +2,7 @@
 #define  MUSICA_H
 
 #include <string>
+#include "SemAvaliacao.h"
 
 using namespace std;
 

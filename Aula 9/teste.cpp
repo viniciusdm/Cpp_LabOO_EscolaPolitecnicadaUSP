@@ -6,51 +6,22 @@
 using namespace std;
 
 void teste() {
-    try {
-        Playlist *p1 = new Playlist("Playlist 1", 1);
-    }
-    catch (invalid_argument *e){
-        cout << "Erro: " << e -> what() << endl;
-        delete e;
-    }
 
-    try {
-        Playlist *p2 = new Playlist("", 2);
-    }
-    catch (invalid_argument *e){
-        cout << "Erro: " << e -> what() << endl;
-        delete e;
-    }
-
-    Playlist *p3 = new Playlist("Favoritos", 2);
+    Playlist *p1 = new Playlist("Favoritos", 3);
     Musica *m1 = new Musica(343, "Tio Macaco");
+    m1 -> avaliar(3);
+    m1 -> avaliar(2);
     Musica *m2 = new Musica(645, "Lingus");
+    m2 -> avaliar(4);
+    m2 -> avaliar(4);
+    m2 -> avaliar(5);
     Musica *m3 = new Musica(372, "Kite");
+    p1 -> adicionar(m1);
+    p1 -> adicionar(m2);
+    p1 -> adicionar(m3);
 
-    p3 -> adicionar(m1);
-
-    try {
-        p3 -> adicionar(m1);
-    }
-
-    catch (invalid_argument *e) {
-        cout << "Erro: " << e -> what() << endl;
-        delete e;
-    }
-
-    try {
-        p3 -> adicionar(m2);
-        p3 -> adicionar(m3);
-    }
-
-    catch (invalid_argument *e) {
-        cout << "Erro: " << e -> what() << endl;
-        delete e;
-    }
-    catch (overflow_error *e) {
-        cout << "Erro: " << e -> what() << endl;
-        delete e;
-    }
+    cout << m1->getNome() << " - " << m1-> getMedia() << endl;
+    cout << m2->getNome() << " - " << m2-> getMedia() << endl;
 }
 
 int main() {

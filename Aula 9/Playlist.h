@@ -2,7 +2,6 @@
 #define  PLAYLIST_H
 
 #include <string>
-
 #include "Musica.h"
 
 using namespace std;
