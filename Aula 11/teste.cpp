@@ -34,9 +34,9 @@ void teste() {
     p1 -> imprimir();
     a1 -> imprimir();
 }
-/*
+
 int main() {
     teste();
     return 0;
 }
-*/
+
